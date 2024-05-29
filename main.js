@@ -6,12 +6,12 @@ function playSound(e) {
         if (!audio) return;
         audio.currentTime = 0;
         audio.play();
-        key.classList.add('playing');
+        key.classList.toggle('playing');
 }
 
 function removeTransition (e) {
     if (e.propertyName !== 'transform') return;
-    this.classList.remove('playing');
+   // this.classList.remove('playing');
 }
 
 const keys = document.querySelectorAll('.keys');
